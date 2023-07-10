@@ -1,5 +1,5 @@
 import { RobotIcon } from "../../../../components/icons/robot-icon";
-import { Box, UnorderedList, ListItem } from "@chakra-ui/react";
+import { UnorderedList, ListItem } from "@chakra-ui/react";
 import { useState } from "react";
 
 const listSize = new Array(10).fill("");
@@ -29,7 +29,7 @@ const AvatarList = ({ clickHandler }) => {
               <RobotIcon
                 iconId={id}
                 isSelected={isSelected}
-                _hover={{ transform: "scale(1.25)" }}
+                _hover={{ transform: "scale(1.1)" }}
               />
             </ListItem>
           );

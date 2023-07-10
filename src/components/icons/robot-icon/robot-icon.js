@@ -1,8 +1,5 @@
 import {
-  Box,
   Avatar,
-  AvatarBadge,
-  useColorModeValue,
   useToken,
 } from "@chakra-ui/react";
 
