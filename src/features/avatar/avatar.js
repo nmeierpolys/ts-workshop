@@ -32,8 +32,8 @@ const Avatar = () => {
         )}
       </Flex>
       <Flex alignItems="center" direction="column">
-        {!isEditMode && <RobotIcon data-testid="avatar" iconId={avatarId} />}
-        {isEditMode && <AvatarList data-testid="avatar-list" clickHandler={formHandler} />}
+        {!isEditMode && <RobotIcon data-testid={`saved-avatar-${avatarId}`} iconId={avatarId} />}
+        {isEditMode && <AvatarList clickHandler={formHandler} />}
       </Flex>
     </Flex>
   );
