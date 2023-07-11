@@ -15,6 +15,7 @@ const RobotIcon = ({ iconId = 1, isSelected = false, ...rest }) => {
         <Avatar
           width="100px"
           height="auto"
+          name={iconId.toString()}
           outline="4px solid"
           outlineColor={unSelected}
           {...rest}
@@ -25,6 +26,7 @@ const RobotIcon = ({ iconId = 1, isSelected = false, ...rest }) => {
         <Avatar
           width="100px"
           height="auto"
+          name={iconId}
           {...rest}
           outline="4px solid"
           outlineColor={outline}

@@ -1,5 +1,5 @@
 {
-  "name": "react-avatar",
+  "name": "ts-workshop",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -19,8 +19,7 @@
     "@babel/runtime": "7.13.8",
     "@testing-library/react": "^14.0.0",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/user-event": "^14.4.3",
-    "typescript": "4.1.3"
+    "@testing-library/user-event": "^14.4.3"
   },
   "scripts": {
     "start": "react-scripts start",
