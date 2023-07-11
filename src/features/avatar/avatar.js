@@ -22,12 +22,12 @@ const Avatar = () => {
     <Flex direction="column" m="7">
       <Flex justifyContent="end">
         {!isEditMode && (
-          <IconButton data-testid="edit-button" m="1" onClick={onEditHandler} icon={<EditIcon />} />
+          <IconButton aria-label="edit-button" data-testid="edit-button" m="1" onClick={onEditHandler} icon={<EditIcon />} />
         )}
         {isEditMode && (
           <ButtonGroup>
-            <IconButton data-testid="save-button" m="1" onClick={onEditHandler} icon={<CheckIcon />} />
-            <IconButton data-testid="cancel-button" m="1" onClick={onEditHandler} icon={<CloseIcon />} />
+            <IconButton aria-label="save-button" data-testid="save-button" m="1" onClick={onEditHandler} icon={<CheckIcon />} />
+            <IconButton aria-label="cancel-button" data-testid="cancel-button" m="1" onClick={onEditHandler} icon={<CloseIcon />} />
           </ButtonGroup>
         )}
       </Flex>
