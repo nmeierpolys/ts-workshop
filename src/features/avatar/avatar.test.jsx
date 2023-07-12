@@ -53,7 +53,5 @@ describe("avatar component",  () => {
 
         expect(selectedAvatar).toBeInTheDocument();
         expect(editButton).toBeInTheDocument();
-
-
     });
 })

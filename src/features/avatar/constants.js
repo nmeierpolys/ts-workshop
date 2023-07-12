@@ -1,3 +1,0 @@
-const DEFAULT_AVATAR_ID = "10";
-
-export { DEFAULT_AVATAR_ID };

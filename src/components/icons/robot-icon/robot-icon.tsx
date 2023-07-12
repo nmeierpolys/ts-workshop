@@ -2,8 +2,13 @@ import {
   Avatar,
   useToken,
 } from "@chakra-ui/react";
+import type { AvatarProps } from '@chakra-ui/react';
+type Props = AvatarProps & {
+  iconId?: string;
+  isSelected?: boolean;
+}
 
-const RobotIcon = ({ iconId = 1, isSelected = false, ...rest }) => {
+const RobotIcon = ({ iconId = '1', isSelected = false, ...rest }: Props) => {
   const [outline, boxShadow, unSelected] = useToken("colors", [
     "red.400",
     "purple.700",

@@ -5,16 +5,17 @@ import { useState } from "react";
 import { DEFAULT_AVATAR_ID } from "./constants";
 import { RobotIcon } from "../../components/icons/robot-icon";
 import { AvatarList } from "./components/avatar-list";
+import type { AvatarListProps } from './components/avatar-list';
 
 const Avatar = () => {
-  const [avatarId, setAvatar] = useState(DEFAULT_AVATAR_ID);
-  const [isEditMode, setIsEditMode] = useState(false);
+  const [avatarId, setAvatar] = useState<string>(DEFAULT_AVATAR_ID);
+  const [isEditMode, setIsEditMode] = useState<boolean>(false);
 
   const onEditHandler = () => {
     setIsEditMode(() => !isEditMode);
   };
 
-  const formHandler = (updatedAvatar) => {
+  const formHandler: AvatarListProps['clickHandler'] = (updatedAvatar) => {
     setAvatar(updatedAvatar);
   };
 

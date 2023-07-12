@@ -4,10 +4,14 @@ import { useState } from "react";
 
 const listSize = new Array(10).fill("");
 
-const AvatarList = ({ clickHandler }) => {
-  const [selectedId, setSelectedId] = useState(0);
+type Props = {
+  clickHandler: (id: string) => void;
+};
 
-  const onClickHandler = (id) => {
+const AvatarList = ({ clickHandler }: Props) => {
+  const [selectedId, setSelectedId] = useState<string>('0');
+
+  const onClickHandler = (id: string) => {
     setSelectedId(id);
     clickHandler(id);
   };
@@ -16,8 +20,8 @@ const AvatarList = ({ clickHandler }) => {
     <UnorderedList data-testid="avatar-list" display="flex" flexWrap="wrap">
       {listSize.length &&
         listSize.map((_, index) => {
-          const id = index + 1;
-          const isSelected = Number(selectedId) === id;
+          const id = (index + 1).toString();
+          const isSelected = selectedId === id;
           return (
             <ListItem
               m="2"
@@ -38,5 +42,7 @@ const AvatarList = ({ clickHandler }) => {
     </UnorderedList>
   );
 };
+
+export type { Props };
 
 export { AvatarList };
